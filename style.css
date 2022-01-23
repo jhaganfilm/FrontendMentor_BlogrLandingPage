@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  /* colors */
+  --primary-300: 355, 100%, 74%;
+  --primary-500: 356, 100%, 66%;
+  --primary-700: 356, 100%, 66%;
+  --white: 0, 0%, 100%;
+  --light-grey: 240, 2%, 79%;
+  --dark-grey: 207, 13%, 34%;
+  --black: 240, 10%, 16%;
+
+  /* gradients */
+  --gradient-red-start: 13, 100%, 72%;
+  --gradient-red-end: 353, 100%, 62%;
+  --gradient-blue-start: 237, 17%, 21%;
+  --gradient-blue-end: 237, 23%, 32%;
+
+  /* fonts */
+  --header-font: "Overpass", sans-serif;
+  --body-font: "Ubuntu", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Ubuntu, sans-serif;
+  color: hsl(var(--dark-grey));
+  background-color: hsl(var(--white));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+/* Header */
+
+header {
+  background: url(./images/bg-pattern-intro-desktop.svg) center no-repeat,
+    linear-gradient(
+      90deg,
+      hsl(var(--gradient-red-start)),
+      hsl(var(--gradient-red-end))
+    );
+  background-size: 150% auto;
+  height: 450px;
+  width: 100%;
+  border-radius: 0 0 0 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Nav */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: hsl(var(--white));
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.links {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.links li {
+  margin-left: 2rem;
+  color: hsl(var(--white));
+}
+
+.links li a {
+  color: inherit;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.links li a:before {
+  content: "";
+  color: inherit;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(var(--white));
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-out;
+}
+
+.links li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  font-family: var(--header-font);
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.btn-white {
+  background-color: hsl(var(--white));
+  color: hsl(var(--primary-700));
+}
+.btn.btn-white:hover {
+  background-color: transparent;
+  color: hsl(var(--white));
+  outline: 1px solid hsl(var(--white));
+}
+
+.btn.btn-outline {
+  background-color: transparent;
+  color: hsl(var(--white));
+  outline: 1px solid hsl(var(--white));
+}
+.btn.btn-outline:hover {
+  background-color: hsl(var(--white));
+  color: hsl(var(--primary-700));
+}
+
+.btn.btn-ghost {
+  background-color: transparent;
+  color: hsl(var(--white));
+}
+.btn.btn-ghost:hover {
+  background-color: hsl(var(--white));
+  color: hsl(var(--primary-700));
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(var(--white));
+}
+
+.hero h1 {
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: var(--body-font);
+}
+
+.hero .tagline {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Section 1 */
+
+section {
+  padding: 4rem 0;
+  width: 100%;
+  padding: 3rem 5rem;
+}
+/* 
+.feature-one {
+  justify-content: center;
+  align-items: center;
+} */
+
+section .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .wrapper .main-left {
+  flex: 1;
+} */
+
+.wrapper .main-left img {
+  width: 100%;
+}
+/* .wrapper .main-right {
+  flex: 1;
+} */
