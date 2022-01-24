@@ -11,7 +11,9 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
@@ -22,6 +24,53 @@
           <div class="logo">
             <img src="./images/logo.svg" alt="" />
           </div>
+          <div id="hamburger" class="hamburger">
+            <img src="./images/icon-hamburger.svg" alt="hamburger" />
+          </div>
+          <div class="links">
+            <div class="dropdown">
+            <li class="dropdownBtn"><a href="#">Product </a><i class="fas fa-angle-down"></i>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Overview</a>
+              <a href="#">Pricing</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Features</a>
+              <a href="#">Integrations</a>
+            </div>
+            </div>
+            <div class="dropdown">
+            <li class="dropdownBtn"><a href="#">Company</a><i class="fas fa-angle-down"></i>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">About</a>
+              <a href="#">Team</a>
+              <a href="#">Blog</a>
+              <a href="#">Careers</a>
+      
+            </div>
+            </div>
+            <div class="dropdown">
+            <li class="dropdownBtn"><a href="#">Connect</a><i class="fas fa-angle-down"></i>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+        
+            </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn btn-ghost">Login</button>
+          <button class="btn btn-white">Sign Up</button>
+        </div>
+        
+        </div>
+      </nav>
+      <div id="nav-mobile" class="hidden">
           <div class="links">
             <li><a href="#">Product</a></li>
             <!-- Drop down: Overview Pricing Marketplace Features Integrations -->
@@ -29,13 +78,11 @@
             <!-- About Team Blog Careers -->
             <li><a href="#">Connect</a></li>
             <!-- Contact Newsletter LinkedIn -->
+             <li><a href="#">Login</a></li>
+              <li><a href="#">Sign Up</a></li>
           </div>
+
         </div>
-        <div class="nav-buttons">
-          <button class="btn btn-ghost">Login</button>
-          <button class="btn btn-white">Sign Up</button>
-        </div>
-      </nav>
       <div class="hero">
         <h1>A modern publishing platform</h1>
         <p class="tagline">Grow your audience and build your online brand</p>
@@ -46,9 +93,11 @@
       </div>
     </header>
     <!-- Section 1 -->
-    <section id="feature-one" class="feature-one container">
-      <h2>Designed for the future</h2>
-      <div class="wrapper">
+    <section id="feature-one" class="feature">
+      <div class="heading">
+        <h2>Designed for the future</h2>
+      </div>
+      <div class="wrapper container">
         <div class="main-left">
           <h3>Introducing an extensible editor</h3>
           <p>
@@ -67,33 +116,88 @@
             you’re in full control.
           </p>
         </div>
-        <div class="main-right">
-          <img src="./images/illustration-editor-desktop.svg" alt="" />
+        <div class="main-right"></div>
+      </div>
+    </section>
+    <section id="banner">
+      <div class="wrapper bg-gradient">
+        <div class="content">
+          <div class="main-left">
+            <img src="./images/illustration-phones.svg" alt="" />
+          </div>
+          <div class="main-right">
+            <h2>State of the Art Infrastructure</h2>
+            <p>
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <section id="banner"></section>
-    <section id="feature-two"></section>
-    <footer></footer>
-    State of the Art Infrastructure With reliability and speed in mind,
-    worldwide data centers provide the backbone for ultra-fast connectivity.
-    This ensures your site will load instantly, no matter where your readers
-    are, keeping your site competitive. Free, open, simple Blogr is a free and
-    open source application backed by a large community of helpful developers.
-    It supports features such as code syntax highlighting, RSS feeds, social
-    media integration, third-party commenting tools, and works seamlessly with
-    Google Analytics. The architecture is clean and is relatively easy to learn.
-    Powerful tooling Batteries included. We built a simple and straightforward
-    CLI tool that makes customization and deployment a breeze, but capable of
-    producing even the most complicated sites. Product Overview Pricing
-    Marketplace Features Integrations Company About Team Blog Careers Connect
-    Contact Newsletter LinkedIn
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <section id="feature-two" class="feature">
+      <div class="wrapper container">
+        <div class="main-left"></div>
+        <div class="main-right">
+          <h3>Free, open, simple</h3>
+          <p>
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics. The architecture is clean and is relatively easy to
+            learn.
+          </p>
+          <h3>Powerful tooling</h3>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
+        <div class="footer-nav">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/jhaganfilm" target="_blank">Joseph Hagan</a
+        >.
+      </div>
+    </footer>
   </body>
 </html>
